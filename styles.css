@@ -27,7 +27,7 @@ h1 {
 }
     
 .text--purple {
-  color: #6030b1;
+  color: #e96f1e;
 }
 
 
@@ -126,7 +126,7 @@ nav {
 }
 
 .nav__link--anchor-primary {
-    background-color: #6030b1;
+    background-color: #cc822d;
     padding: 8px 20px;
     border-radius: 50px;
     color: white;
@@ -134,7 +134,7 @@ nav {
 }
 
 .nav__link--anchor-primary:hover {
-    background-color: #5d3eff;
+    background-color: #dfa63e;
 }
 
 .personal__logo {
@@ -174,9 +174,9 @@ nav {
  
   
 
- .about-me__picture--mask {
-    width: 50%;
-    height: 330px;
+.about-me__picture--mask {
+    width: 30%;
+    height: 85px;
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
@@ -197,7 +197,7 @@ nav {
 
 
 .about-me__picture {
-  width: 100%;
+  width: 50%;
   
     }
    
