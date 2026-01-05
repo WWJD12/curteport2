@@ -123,6 +123,8 @@ nav {
     margin: 0 12px;
     color: #000;
      font-weight: 700;
+     text-decoration: none;
+     position: relative;
 }
 
 .nav__link--anchor-primary {
@@ -208,13 +210,13 @@ nav {
  
 }
 
-.aboout-me__info--title {
+.about-me__info--title {
     margin-bottom: 16px;
     animation: fade-up 650ms 400ms backwards;
     }
 
     
-.aboout-me__info--para {
+.about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
     animation: fade-up 650ms 600ms backwards;
@@ -232,7 +234,7 @@ nav {
 }
 @keyframes fade-up {
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(40px);
   }
   100% {
@@ -265,6 +267,7 @@ nav {
   .wave {
     display: inline-block;
     animation: animate-wave 500ms infinite ease-in-out;
+    transform-origin: 70% 70%;
   }
 
   @keyframes animate-wave {
@@ -379,7 +382,6 @@ nav {
 
 .project:hover .project__description {
     opacity: 1;
-    transform: translate(-50%)
 }
 
 .project__list {
@@ -388,14 +390,18 @@ nav {
 
 .project__description {
     position: absolute;
-    top: 50%;
-    left: 90%;
-    transform: translate(100%);
-    max-width: 550px;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px;
+    max-width: 100%;
     z-index: 3;
     opacity: 0;
-    transition: transform 450ms, opacity 300ms;
-    }
+    transition: opacity 300ms ease;
+}
 
     .project__description--title {
         font-size: 40px;
@@ -410,13 +416,13 @@ nav {
         margin-right: 16px;
         }
 
-    .project__description--title
-    .project__description--sub-title
-    .project__description--para
-    .project__description--link {
-        text-align: left;
-        color: #fff;
-    }
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link {
+    text-align: center;
+    color: #fff;
+}
 
     /* FOOTER */
 
@@ -446,13 +452,13 @@ footer {
     height: 100px;
 }
 
-.footer__social--link
+.footer__social--list a,
 .footer__copyright,
-.footer__logo--pooper {
+.footer__logo--popper {
     color: #fff;
 }
 
-.footer__logo--pooper {
+.footer__logo--popper {
     position: absolute;
     right: 0;
     top: 30px;
@@ -466,7 +472,7 @@ footer {
     position: relative;
       }
 
-.footer__ancor:hover .footer__logo--pooper{
+.footer__ancor:hover .footer__logo--popper{
     transform: translateX(60px);
     opacity: 1;
 
@@ -508,15 +514,13 @@ h1 {
   
   
   @media (max-width: 480px) {
-  .nav__link:not(:last-child) {
-  display: none;
-}
-  } 
-  
-  .project__description {
-    padding: 0;
-    left: 0;
-    width: 100%;
+    .nav__link:not(:last-child) {
+      display: none;
+    }
+    .project__description {
+      padding: 0 16px;
+      max-width: 100%;
+    }
   }
 
   .project__description--para {
